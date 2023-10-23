@@ -18,7 +18,7 @@ loras_folder = "./text-generation-webui/loras"
 characters_folder = "./text-generation-webui/characters"
 
 if getattr(sys, 'frozen', False):
-    webui_file = sys._MEIPASS + '/webuiGUI.py'
+    webui_file = f'{sys._MEIPASS}/webuiGUI.py'
 else:
     webui_file = 'webuiGUI.py'
 
@@ -31,8 +31,6 @@ try:
     nvidia_gpu = True
 except:
     nvidia_gpu = False
-    pass
-
 # # Get the absolute path of the script file
 script_path = os.path.abspath(__file__)
 
